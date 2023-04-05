@@ -3,7 +3,7 @@ Educational
 
 This mini JavaScript (in ReactJS) project is, in my mind, very important despite it's being extremely tiny and without any visual appeal.
 
-The main lesson here is about shallow copying. On line 12 (commented out) and 13 in App.jsx, there are 2 versions of a person object: the former is a plain object but
+The main lesson here is about shallow equality. On line 12 (commented out) and 13 in App.jsx, there are 2 versions of a person object: the former is a plain object but
 right now it will remain useless being commented out; in the latter version, it is memoized by being passed to useMemo.
 This memoized version of person object is in turn passed to Profile component which is memoized by memo().
 
@@ -23,5 +23,3 @@ will fail Object.is() test. Object.is() tests whether 2 objects are shallowly eq
 Whereas useMemo preserves the original person object by preventing it from being created anew. Even though its parent Page re-renders, person object will not be
 recreated, it will stay 'intact' as it were before the re-render of Page, so it passess Object.is() test, i.e. its previous location in memory before the re-render
 and the current location after the re-render will remain the same.
-
-All of the above one can test by downloading and running npm i at the downloaded code's directory
