@@ -23,3 +23,5 @@ will fail Object.is() test. Object.is() tests whether 2 objects are shallowly eq
 Whereas useMemo preserves the original person object by preventing it from being created anew. Even though its parent Page re-renders, person object will not be
 recreated, it will stay 'intact' as it were before the re-render of Page, so it passess Object.is() test, i.e. its previous location in memory before the re-render
 and the current location after the re-render will remain the same.
+
+For the purposes of testing, the code in App.jsx can be copied and pasted directly here: https://playcode.io/react
