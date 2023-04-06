@@ -14,8 +14,8 @@ everytime we incremet the state, all the inner components will be re-rendered, e
 Profile is saved from (unnecessarily) being re-rendered thanks to useMemo.
 
 But if we comment out lines 13-16 and uncomment line 12, the situation radically changes: now Profile component will also be re-rendered as Page does EVEN THOUGH
-the plain person object remains unchanged!!!(!) Why so? This is because on every re-render, person object is created anew. Therefore, the <Page/> component receives
-a new person prop value whenever the <Profile /> component function is invoked. Period.
+the plain person object remains unchanged!!!(!) Why so? This is because on every re-render, person object is created anew. Therefore, the Page component receives
+a new person prop value whenever the Profile component function is invoked. Period.
 
 Diving deeper:
 Of course person object properties will not change on every re-creation but each newly created person object instance will be located in different memory address
